@@ -11,7 +11,7 @@ class SearchService:
     def search(self, query: str, limit: int = 3):
         query_dense, query_sparse, query_colbert = self.embeddings_service.embed_query(query)
         
-        results = self.qdrant.query_points(
+        results = self.qdrant_client.query_points(
             collection_name = self.collection_name,
             prefetch=[
                 {
@@ -34,7 +34,7 @@ class SearchService:
             SearchResult(
                 score=result.score / max_score, 
                 text=result.payload["text"], 
-                metadata=result.payload["medata"]
+                metadata=result.payload["metadata"]
             )
             
             for result in results.points
