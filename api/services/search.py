@@ -4,14 +4,14 @@ from services.embeddings import EmbeddingsService
 
 class SearchService:
     def __init__(self, qdrant_url: str, qdrant_api_key: str, collection_name: str):
-        self.qdrant_client = QdrantClient(url=qdrant_url, api_key=qdrant_api_key)
+        self.qdrant = QdrantClient(url=qdrant_url, api_key=qdrant_api_key)
         self.collection_name = collection_name
         self.embeddings_service = EmbeddingsService()
         
     def search(self, query: str, limit: int = 3):
         query_dense, query_sparse, query_colbert = self.embeddings_service.embed_query(query)
         
-        results = self.qdrant_client.query_points(
+        results = self.qdrant.query_points(
             collection_name = self.collection_name,
             prefetch=[
                 {
