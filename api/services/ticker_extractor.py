@@ -24,6 +24,7 @@ class TickerExtractor:
             if company_name in query_lower:
                 return ticker
 
+        # Se não achar na lista, usar a função privada para bvuscar o ticker
         return self._extract_with_llm(query)
 
     def _extract_with_llm(self, query: str) -> str | None:

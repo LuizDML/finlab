@@ -1,13 +1,16 @@
 import os
 import uuid
 
+from pathlib import Path
 from dotenv import load_dotenv
 from fastembed import TextEmbedding, SparseTextEmbedding, LateInteractionTextEmbedding
 from qdrant_client import QdrantClient, models
 from utils.semantic_chunker import SemanticChunker
 from utils.edgar_client import EdgarClient
 
-load_dotenv()
+# Movi o env na pasta de configurações
+env_path = Path(__file__).resolve().parents[1] / "api" / "config" / ".env"
+load_dotenv(env_path)
 
 DENSE_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 SPARSE_MODEL = "Qdrant/bm25"

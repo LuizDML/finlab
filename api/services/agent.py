@@ -1,5 +1,5 @@
 import asyncio
-import instructor
+import instructor # Biblioteca para passar a saída Pydantic desejada para o modelo
 
 from config.prompts import (
     AGGREGATION_PROMPT,
@@ -67,6 +67,7 @@ class AgentService:
         return await self._generate_completion(prompt, SentimentAnalysis)
 
     async def analyze(self, query: str, limit: int = 3):
+        
         ticker = self.ticker_extractor.extract_ticker(query)
 
         if not ticker:
