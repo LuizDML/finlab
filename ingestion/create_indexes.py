@@ -1,4 +1,5 @@
 """Criar índices para melhorar a performance e filtrar apenas itens desejados"""
+# Não esquecer de rodar APÓS fazer a ingestão
 
 import os
 
