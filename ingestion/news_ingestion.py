@@ -1,13 +1,16 @@
 import os
 import uuid
 
+from pathlib import Path
 from dotenv import load_dotenv
 from fastembed import LateInteractionTextEmbedding, SparseTextEmbedding, TextEmbedding
 from qdrant_client import QdrantClient, models
 from utils.news_client import NewsClient
 from utils.simple_chunker import SimpleChunker
 
-load_dotenv()
+# Movi o env na pasta de configurações
+env_path = Path(__file__).resolve().parents[1] / "api" / "config" / ".env"
+load_dotenv(env_path)
 
 # Definições
 DENSE_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
@@ -24,7 +27,7 @@ qdrant = QdrantClient(
 
 # Iniciar o cliente de noticiais, passando a empresa a ser analisada e a quantidade limite de notícias
 news_client = NewsClient()
-news_data = news_client.fetch_news("AAPL", max_stories=10)
+news_data = news_client.fetch_news("IBM", max_stories=10)
 
 chunker = SimpleChunker(max_tokens=MAX_TOKENS)
 

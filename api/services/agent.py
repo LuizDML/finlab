@@ -1,5 +1,6 @@
 import asyncio
 import instructor # Biblioteca para passar a saída Pydantic desejada para o modelo
+from typing import List
 
 from config.prompts import (
     AGGREGATION_PROMPT,

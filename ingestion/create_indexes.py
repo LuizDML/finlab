@@ -1,5 +1,5 @@
 """Criar índices para melhorar a performance e filtrar apenas itens desejados"""
-# Não esquecer de rodar APÓS fazer a ingestão
+# Não esquecer de rodar APÓS fazer a ingestão dos formulários da SEC e do Yahoo Financças
 
 import os
 

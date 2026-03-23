@@ -13,7 +13,7 @@ class SearchService:
         self.embeddings_service = EmbeddingsService()
       
     # Função para filtros adicionais    
-    def _build_qdrant_filter(self,filters:Optional[Dict[str, Any]]) -> Optional[Dict]:
+    def _build_qdrant_filter(self, filters: Optional[Dict[str, Any]]) -> Optional[Dict]:
         if not filters:
             return None
 
