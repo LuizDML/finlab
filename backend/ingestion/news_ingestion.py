@@ -27,7 +27,7 @@ qdrant = QdrantClient(
 
 # Iniciar o cliente de noticiais, passando a empresa a ser analisada e a quantidade limite de notícias
 news_client = NewsClient()
-news_data = news_client.fetch_news("IBM", max_stories=10)
+news_data = news_client.fetch_news("AAPL", max_stories=10)
 
 chunker = SimpleChunker(max_tokens=MAX_TOKENS)
 

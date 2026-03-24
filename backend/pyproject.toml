@@ -10,6 +10,7 @@ dependencies = [
     "groq>=1.1.1",
     "hdbscan>=0.8.41",
     "instructor>=1.14.5",
+    "langfuse>=4.0.1",
     "pydantic>=2.12.5",
     "pydantic-settings>=2.13.1",
     "python-dotenv>=1.2.2",
