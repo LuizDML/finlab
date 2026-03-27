@@ -40,6 +40,12 @@ results = qdrant.query_points(
     query=query_colbert,
     using="colbert",
     limit=3,
+    # Se a qualidade dos resultados cair após quantização, aumentar oversampling
+    search_params=models.SearchParams(
+        ignore=False,
+        rescore=True,
+        oversampling=1.5
+    )
 )
 
 max_score = max(result.score for result in results.points)

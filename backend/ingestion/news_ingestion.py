@@ -13,11 +13,12 @@ env_path = Path(__file__).resolve().parents[1] / "api" / "config" / ".env"
 load_dotenv(env_path)
 
 # Definições
-DENSE_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
+DENSE_MODEL = "intfloat/multilingual-e5-large"
+# DENSE_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 SPARSE_MODEL = "Qdrant/bm25"
 COLBERT_MODEL = "colbert-ir/colbertv2.0"
 COLLECTION_NAME = "financial"
-MAX_TOKENS = 300
+MAX_TOKENS = 500
 
 # Iniciar o cliente do Qdrant
 qdrant = QdrantClient(
