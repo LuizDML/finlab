@@ -1,8 +1,8 @@
 from fastapi import APIRouter
-from models.rag import RAGRequest, RAGResponse
-from services.rag import RAGService
+from api.models.rag import RAGRequest, RAGResponse
+from api.services.rag import RAGService
 
-from routers.search import search_service
+from api.routers.search import search_service
 
 router = APIRouter()
 
@@ -12,4 +12,4 @@ rag_service = RAGService(
 
 @router.post("/rag", response_model=RAGResponse)
 def rag(request: RAGRequest):
-    return rag_service.generate_response(request.query)
+    return rag_service.generate_answer(request.query, request.limit)

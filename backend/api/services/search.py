@@ -1,9 +1,9 @@
 from typing import Any, Dict, Optional
 
 from qdrant_client import QdrantClient, models
-from models.search import SearchResponse, SearchResult
+from api.models.search import SearchResponse, SearchResult
 
-from services.embeddings import EmbeddingsService
+from api.services.embeddings import EmbeddingsService
 
 
 class SearchService:

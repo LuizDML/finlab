@@ -1,5 +1,5 @@
 from fastembed import TextEmbedding, SparseTextEmbedding, LateInteractionTextEmbedding
-from config.settings import settings
+from api.config.settings import settings
 
 class EmbeddingsService:
     def __init__(self):

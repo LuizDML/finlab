@@ -8,7 +8,7 @@ from qdrant_client import QdrantClient, models
 env_path = Path(__file__).resolve().parents[1] / "api" / "config" / ".env"
 load_dotenv(env_path)
 
-COLLECTION_NAME = "financial"
+COLLECTION_NAME = "financial_mini"
 
 qdrant = QdrantClient(
     url=os.getenv("QDRANT_URL"),
@@ -16,7 +16,7 @@ qdrant = QdrantClient(
 )
 
 # Deleta a collection
-qdrant.delete_collection(COLLECTION_NAME)
+# qdrant.delete_collection(COLLECTION_NAME)
 
 # Na criação da collection usar on_disk=True para cada vetor ocupar 1KB ao invés de 4KB
 # no geral quantização só é necessário quando houver mais de 1 milhão de vetores
@@ -24,7 +24,8 @@ qdrant.create_collection(
     collection_name=COLLECTION_NAME,
     vectors_config={
         "dense": models.VectorParams(
-            size=1024,
+            #size=1024,
+            size=384, 
             distance=models.Distance.COSINE, 
             on_disk=True,), 
         "colbert": models.VectorParams(

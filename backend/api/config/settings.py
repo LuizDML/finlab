@@ -13,7 +13,9 @@ class Settings(BaseSettings):
     
     qdrant_url: str
     qdrant_api_key: str
-    collection_name: str = "financial"
+    collection_name: str = "financial_mini"
+    #dense_model: str = "intfloat/multilingual-e5-large" # para pc é ok
+    #dense_model: str = "intfloat/multilingual-e5-small" # 
     dense_model: str = "sentence-transformers/all-MiniLM-L6-v2"
     sparse_model: str = "qdrant/bm25"
     colbert_model: str = "colbert-ir/colbertv2.0"

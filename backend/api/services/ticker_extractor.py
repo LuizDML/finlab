@@ -1,6 +1,6 @@
 import instructor
-from config.company_mappings import COMPANY_TICKER_MAPPINGS, TICKER_EXTRACTION_PROMPT
-from config.settings import settings
+from api.config.company_mappings import COMPANY_TICKER_MAPPINGS, TICKER_EXTRACTION_PROMPT
+from api.config.settings import settings
 from groq import Groq
 from pydantic import BaseModel, Field
 

@@ -9,7 +9,7 @@ load_dotenv()
 DENSE_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 SPARSE_MODEL = "Qdrant/bm25"
 COLBERT_MODEL = "colbert-ir/colbertv2.0"
-COLLECTION_NAME = "financial"
+COLLECTION_NAME = "financial_mini"
 
 qdrant = QdrantClient(
     url=os.getenv("QDRANT_URL"),

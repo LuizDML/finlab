@@ -1,7 +1,7 @@
 from fastapi import APIRouter
-from config.settings import settings
-from models.search import SearchRequest, SearchResponse
-from services.search import SearchService
+from api.config.settings import settings
+from api.models.search import SearchRequest, SearchResponse
+from api.services.search import SearchService
 
 router = APIRouter()
 

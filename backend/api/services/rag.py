@@ -1,8 +1,8 @@
 from groq import Groq
-from config.settings import settings
-from models.rag import RAGResponse
-from config.prompts import RAG_PROMPT
-from services.search import SearchService
+from api.config.settings import settings
+from api.models.rag import RAGResponse
+from api.config.prompts import RAG_PROMPT
+from api.services.search import SearchService
 
 class RAGService:
     def __init__(self, search_service: SearchService):

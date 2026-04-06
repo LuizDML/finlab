@@ -3,10 +3,12 @@ from transformers import AutoTokenizer
 class SimpleChunker:
     def __init__(
         self,
-        # model_name: str = "sentence-transformers/all-MiniLM-L6-v2"
+        model_name: str = "sentence-transformers/all-MiniLM-L6-v2",
         # Modelo multilingual e3-large suporta o dobro dos tokens do all mini e seus embbegings são de 1024 dimensões
-        model_name: str = "intfloat/multilingual-e5-large",
-        max_tokens: int = 500,
+        # model_name: str = "intfloat/multilingual-e5-large",
+        # max_tokens: int = 500,
+        #model_name: str = "intfloat/multilingual-e5-small",
+        max_tokens: int = 300,
     ):
         self.max_tokens = max_tokens
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)

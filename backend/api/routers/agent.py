@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException
-from models.agent import AgentRequest, AgentResponse
-from services.agent import AgentService
+from api.models.agent import AgentRequest, AgentResponse
+from api.services.agent import AgentService
 
-from routers.search import search_service
+from api.routers.search import search_service
 
 router = APIRouter()
 agent_service = AgentService(search_service=search_service)

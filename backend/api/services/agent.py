@@ -2,7 +2,7 @@ import asyncio
 import instructor # Biblioteca para passar a saída Pydantic desejada para o modelo
 from typing import List
 
-from config.prompts import (
+from api.config.prompts import (
     AGGREGATION_PROMPT,
     FUNDAMENTAL_PROMPT,
     FUNDAMENTAL_QUERIES,
@@ -11,9 +11,9 @@ from config.prompts import (
     SENTIMENT_PROMPT,
     SENTIMENT_QUERY_TEMPLATE,
 )
-from config.settings import settings
+from api.config.settings import settings
 from groq import AsyncGroq
-from models.agent import (
+from api.models.agent import (
     AgentResponse,
     FinalRecommendation,
     FundamentalAnalysis,
@@ -21,8 +21,8 @@ from models.agent import (
     SentimentAnalysis,
 )
 
-from services.search import SearchService
-from services.ticker_extractor import TickerExtractor
+from api.services.search import SearchService
+from api.services.ticker_extractor import TickerExtractor
 
 
 class AgentService:
