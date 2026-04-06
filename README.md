@@ -24,36 +24,25 @@ O projeto foi construído como um exercício prático de RAG — minha formaçã
 > 💡 *Substitua os espaços abaixo pelas imagens correspondentes.*
 
 ### Interface principal
-<!-- IMAGEM: Print da tela inicial do frontend com a caixa de pergunta -->
-```
-[ Inserir print do frontend aqui ]
-```
+<img width="856" height="461" alt="image" src="https://github.com/user-attachments/assets/95f877df-fbed-47dd-ab4b-92672b3252d0" />
+
 
 ### Exemplo de resposta (modo RAG)
-<!-- IMAGEM: Print de uma pergunta sendo feita e a resposta gerada pelo RAG -->
-```
-[ Inserir print de uma resposta do /rag aqui ]
-```
+<img width="906" height="601" alt="image" src="https://github.com/user-attachments/assets/867d957e-2dfc-4938-ae20-6489754609c4" />
+
 
 ### Exemplo de resposta (modo Agente)
-<!-- IMAGEM: Print de uma conversa com o agente, com a checkbox marcada -->
-```
-[ Inserir print do /agent em ação aqui ]
-```
+<img width="820" height="478" alt="image" src="https://github.com/user-attachments/assets/4804290c-599d-4d36-ba5b-e553f8a51af8" />
+<img width="795" height="542" alt="image" src="https://github.com/user-attachments/assets/56746d69-d62c-46d8-8af5-5daa7dab314a" />
+
 
 ### Collections no Qdrant
-<!-- IMAGEM: Print do dashboard do Qdrant Cloud mostrando as collections (SEC e News) -->
-```
-[ Inserir print das collections no Qdrant aqui ]
-```
+<img width="1173" height="296" alt="image" src="https://github.com/user-attachments/assets/13c3e261-3d09-4221-9bbe-4e7c51f82d77" />
+
 
 ### Estrutura dos vetores no Qdrant
-<!-- IMAGEM: Print mostrando um ponto/payload dentro de uma collection, com o texto e os metadados -->
-```
-[ Inserir print de um vetor/payload no Qdrant aqui ]
-```
+<img width="1164" height="662" alt="image" src="https://github.com/user-attachments/assets/402ca872-2d0e-4069-a547-39493ee85bf2" />
 
----
 
 ## 🏗️ Como o projeto está organizado
 
@@ -231,4 +220,4 @@ Projeto desenvolvido como exercício da **Especialização em Engenharia de IA**
 
 ## 📬 Contato
 
-Feito por [Luiz Daniel](https://github.com/LuizDML) — sinta-se à vontade para abrir uma issue ou entrar em contato!
+Feito por [Luiz Almeida](https://github.com/LuizDML) — sinta-se à vontade para abrir uma issue ou entrar em contato!
